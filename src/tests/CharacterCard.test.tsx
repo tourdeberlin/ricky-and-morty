@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import CharacterCard from './CharacterCard';
+import CharacterCard from '../components/CharacterCard/CharacterCard';
 
 interface Character {
   id: number;

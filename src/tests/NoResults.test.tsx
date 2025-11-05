@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import NoResults from './NoResults';
+import NoResults from '../components/NoResults/NoResults';
 
 describe('SearchForm', () => {
   it('displays text about no results', () => {

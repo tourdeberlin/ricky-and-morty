@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import { userEvent } from '@testing-library/user-event';
-import SearchForm from './SearchForm';
+import SearchForm from '../components/SearchForm/SearchForm';
 
 describe('SearchForm', () => {
   const mockOnInputChange = vi.fn();
