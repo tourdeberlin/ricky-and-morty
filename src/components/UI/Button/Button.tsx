@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styles from './Button.module.scss';
 
 interface ButtonProps {
@@ -8,21 +8,22 @@ interface ButtonProps {
   type?: 'button' | 'submit' | 'reset';
 }
 
-class Button extends Component<ButtonProps> {
-  public override render() {
-    const { children, onClick, disabled = false, type } = this.props;
-
-    return (
-      <button
-        className={styles.button}
-        onClick={onClick}
-        disabled={disabled}
-        type={type}
-      >
-        {children}
-      </button>
-    );
-  }
-}
+const Button: React.FC<ButtonProps> = ({
+  children,
+  onClick,
+  disabled = false,
+  type = 'button',
+}) => {
+  return (
+    <button
+      className={styles.button}
+      onClick={onClick}
+      disabled={disabled}
+      type={type}
+    >
+      {children}
+    </button>
+  );
+};
 
 export default Button;

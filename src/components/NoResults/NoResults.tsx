@@ -1,7 +1,7 @@
 import noResultsImage from '../../assets/noResults.png';
 import styles from './NoResults.module.scss';
 
-const NoResults = () => {
+const NoResults: React.FC = () => {
   return (
     <div className={styles.noResults}>
       <p>This character does not exist</p>
