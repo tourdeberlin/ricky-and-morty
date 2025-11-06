@@ -1,3 +1,4 @@
+import React from 'react';
 import type { Character } from '../types';
 import styles from './CharacterCard.module.scss';
 
