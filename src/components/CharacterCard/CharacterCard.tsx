@@ -27,7 +27,7 @@ const CharacterCard: React.FC<CharacterCardProps> = ({ character }) => {
         </div>
         <div className={styles.cardInfoItem}>
           <span>Status</span>
-          <span>{status}</span>
+          <span>{character.status}</span>
         </div>
         <div className={styles.cardEpisode}>
           Appears in {character.episode.length} episodes
