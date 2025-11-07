@@ -1,6 +1,7 @@
 import React from 'react';
 import type { Character } from '../types';
 import styles from './CharacterCard.module.scss';
+import CharacterImage from '../CharacterImage/CharacterImage';
 
 interface CharacterCardProps {
   character: Character;
@@ -9,12 +10,7 @@ interface CharacterCardProps {
 const CharacterCard: React.FC<CharacterCardProps> = ({ character }) => {
   return (
     <div className={styles.card}>
-      <img
-        src={character.image}
-        alt={character.name}
-        className={styles.cardImg}
-        loading="lazy"
-      />
+      <CharacterImage src={character.image} alt={character.name} />
       <div className={styles.cardInfo}>
         <h3 className={styles.cardName}>{character.name}</h3>
         <div className={styles.cardInfoItem}>

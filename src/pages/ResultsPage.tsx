@@ -6,7 +6,7 @@ import Header from '../components/Header/Header';
 import Loader from '../components/Loader/Loader';
 import NoResults from '../components/NoResults/NoResults';
 import Pagination from '../components/Pagination/Pagination';
-import CardList2 from '../components/CardList2/CardList2';
+import CardList from '../components/CardList2/CardList2';
 
 const ResultsPage: React.FC = () => {
   const [inputValue, setInputValue] = useState<string>('');
@@ -71,7 +71,7 @@ const ResultsPage: React.FC = () => {
         <Loader />
       ) : searchResults.length ? (
         <>
-          <CardList2 results={searchResults} />
+          <CardList results={searchResults} />
           <div>
             <Pagination
               current={currentPage}
