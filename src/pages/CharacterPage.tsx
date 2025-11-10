@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams, useSearchParams } from 'react-router';
-import CharacterInfo from '../components/CharacterInfo/CharacterModal';
+import CharacterModal from '../components/CharacterModal/CharacterModal';
 import type { FilteredCharacter } from '../types';
 import Loader from '../components/Loader/Loader';
 
 const CharacterPage: React.FC = () => {
   const [character, setCharacter] = useState<FilteredCharacter | null>(null);
-  const [error, setError] = useState<string | null>(null);
+  const [, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const { id } = useParams<{ id: string }>();
@@ -57,20 +57,7 @@ const CharacterPage: React.FC = () => {
     return <Loader />;
   }
 
-  if (error) {
-    return (
-      <div>
-        <p>Error: {error}</p>
-        <button onClick={handleCloseModal}>← Back to list</button>
-      </div>
-    );
-  }
-
-  if (!character) {
-    return <div>Character not found.</div>;
-  }
-
-  return <CharacterInfo character={character} onClose={handleCloseModal} />;
+  return <CharacterModal character={character} onClose={handleCloseModal} />;
 };
 
 export default CharacterPage;

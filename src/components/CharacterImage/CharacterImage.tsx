@@ -5,13 +5,14 @@ import styles from './CharacterImage.module.scss';
 interface CharacterImageProps {
   src?: string;
   alt?: string;
+  isBig?: boolean;
 }
 
-const CharacterImage: React.FC<CharacterImageProps> = ({ src, alt }) => {
+const CharacterImage: React.FC<CharacterImageProps> = ({ src, alt, isBig }) => {
   const [loaded, setLoaded] = useState(false);
 
   return (
-    <div className={styles.container}>
+    <div className={isBig ? styles.big : styles.small}>
       <img
         src={src}
         alt={alt}

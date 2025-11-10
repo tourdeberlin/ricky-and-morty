@@ -41,7 +41,7 @@ const CharacterModal: React.FC<CharacterInfoProps> = ({
       <button className={styles.close} onClick={onClose}>
         &times;
       </button>
-      <CharacterImage src={image} alt={name} />
+      <CharacterImage src={image} alt={name} isBig={true} />
 
       <div className={styles.description}>
         {infoList.map(({ label, value }) => (

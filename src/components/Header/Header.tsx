@@ -22,7 +22,7 @@ const Header: React.FC<HeaderProps> = ({
         onInputChange={onInputChange}
         onSearchSubmit={onSearchSubmit}
       />
-      <div>ThemeSwitch</div>
+      <div></div>
     </header>
   );
 };
